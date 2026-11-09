@@ -12,7 +12,6 @@ def divide(a, b):
         print("Помилка: ділення на нуль неможливе.")
         return None
 
-
 OPERATIONS = {
     "+": add,
     "-": subtract,
@@ -29,7 +28,7 @@ def ask_number(prompt):
         except ValueError:
             print("Помилка: введіть число (наприклад, 5 або 3.14).")
         except (EOFError, KeyboardInterrupt):
-            raise  # завершення програми обробляється в main()
+            raise  
 
 
 def ask_operation(prompt):
@@ -49,7 +48,7 @@ def ask_operation(prompt):
 def main():
     print("Калькулятор. Для виходу введіть q замість операції.")
     try:
-        while True:  # нескінченне введення даних
+        while True:  
             op = ask_operation("Операція (+, -, *, /) або q: ")
             if op is None:
                 break
